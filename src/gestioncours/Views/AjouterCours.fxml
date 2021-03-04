@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestioncours.Views.AjouterCoursController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="222.0" styleClass="linear-grad" stylesheets="@login1.css">
+         <children>
+            <ImageView fitHeight="225.0" fitWidth="222.0" layoutX="4.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../esprit%203ème/PI/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="262.0" layoutY="28.0" prefHeight="36.0" prefWidth="222.0" text="Ajotuer un cours!">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nomC" layoutX="262.0" layoutY="94.0" prefHeight="26.0" prefWidth="162.0" promptText="Nom du cours" />
+      <TextField fx:id="nbH" layoutX="262.0" layoutY="159.0" prefHeight="26.0" prefWidth="161.0" promptText="Nombre d'heure du cours" />
+      <TextField fx:id="nomE" layoutX="262.0" layoutY="226.0" promptText="Nom d'enseignant" />
+      <Button fx:id="v" layoutX="459.0" layoutY="300.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="91.0" styleClass="button7" stylesheets="@login1.css" text="Validez" />
+   </children>
+</AnchorPane>
