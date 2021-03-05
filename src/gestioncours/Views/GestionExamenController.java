@@ -84,8 +84,8 @@ public class GestionExamenController implements Initializable {
             }
                });
          affecterE.setOnAction(e -> {
-            //(String id,String nom, String adresse, String prix, String surface,String capacite)
-
+            ex = table.getSelectionModel().getSelectedItem();
+            if (!(ex == null)) {
             try {
                 Parent root;
                 root = FXMLLoader.load(getClass().getResource("AffecterExamens.fxml"));
@@ -93,6 +93,7 @@ public class GestionExamenController implements Initializable {
 
             } catch (IOException ex) {
                 Logger.getLogger(AjouterCoursController.class.getName()).log(Level.SEVERE, null, ex);
+            }
             }
                });
             supprimerE.setOnAction(e -> {

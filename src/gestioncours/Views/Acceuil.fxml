@@ -17,16 +17,16 @@
             <String fx:value="label" />
          </styleClass>
          <children>
-            <ImageView fitHeight="232.0" fitWidth="298.0" layoutX="-12.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../../../esprit%203ème/PI/logo.png" />
-               </image>
-            </ImageView>
             <Label layoutX="66.0" layoutY="53.0" prefHeight="73.0" prefWidth="206.0" text="Bienvenue" textAlignment="CENTER">
                <font>
                   <Font name="Myanmar Text Bold" size="20.0" />
                </font>
             </Label>
+            <ImageView fitHeight="214.0" fitWidth="260.0" layoutX="6.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../esprit%203ème/PI/logo.png" />
+               </image>
+            </ImageView>
          </children></AnchorPane>
       <Label layoutX="320.0" layoutY="50.0" prefHeight="18.0" prefWidth="206.0" text="Sign in">
          <font>

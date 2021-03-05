@@ -68,7 +68,7 @@ public class ModifierExamenController implements Initializable {
              root=FXMLLoader.load(getClass().getResource("GestionExamen.fxml"));
              retour.getScene().setRoot(root);
          } catch (IOException ex) {
-             Logger.getLogger(AffecterExamenController.class.getName()).log(Level.SEVERE, null, ex);
+             Logger.getLogger(AffecterExamensController.class.getName()).log(Level.SEVERE, null, ex);
          }
             
              });  

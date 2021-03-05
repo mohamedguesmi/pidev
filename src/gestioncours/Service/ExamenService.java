@@ -54,7 +54,8 @@ public class ExamenService {
         PreparedStatement statement = connexion.prepareStatement(sql);
         statement.setInt(1, e.getDuree());
         statement.setString(2, e.getCours());
-        statement.setInt(3, e.getId());
+        statement.setString(3, e.getDateE());
+        statement.setInt(4, e.getId());
         System.out.println(e.getId());
         int rowsUpdated = statement.executeUpdate();
         if (rowsUpdated > 0) {
