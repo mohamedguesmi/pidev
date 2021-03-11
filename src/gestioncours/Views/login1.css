@@ -248,3 +248,12 @@
     -fx-background-color: rgba(0,0,0,0.0);
     -fx-background-image: url("/buttonimage/shutdown.png") ;
 }
+.back {
+    -fx-background-image: url("back.jpg") ;
+}
+.backadmin {
+    -fx-background-image: url("badmin.jpg") ;
+}
+.backuser {
+    -fx-background-image: url("buser.jpg") ;
+}

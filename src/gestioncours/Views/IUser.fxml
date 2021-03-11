@@ -1,11 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestioncours.Views.IUserController">
-    
+<AnchorPane id="AnchorPane" prefHeight="453.0" prefWidth="800.0" styleClass="backadmin" stylesheets="@login1.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestioncours.Views.IUserController">
+   <children>
+      <Pane prefHeight="80.0" prefWidth="663.0">
+         <children>
+            <Text fill="WHITE" layoutX="238.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Liste des cours">
+               <font>
+                  <Font name="Akhbar MT" size="45.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="130.0" fitWidth="174.0" layoutX="-21.0" layoutY="-16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/logo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="55.0" fitWidth="50.0" layoutX="568.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/system_administrator_male_50px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Separator layoutY="80.0" prefHeight="10.0" prefWidth="800.0" />
+      <FlowPane layoutX="6.0" layoutY="90.0" prefHeight="457.0" prefWidth="732.0">
+         <children>
+            <ScrollPane prefHeight="458.0" prefWidth="790.0">
+               <content>
+                  <FlowPane fx:id="FlowPaneCour" prefHeight="458.0" prefWidth="792.0" styleClass="backadmin" stylesheets="@login1.css" />
+               </content>
+            </ScrollPane>
+         </children>
+      </FlowPane>
+   </children>
 </AnchorPane>

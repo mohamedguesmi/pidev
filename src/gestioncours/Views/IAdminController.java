@@ -30,6 +30,7 @@ public class IAdminController implements Initializable {
 
     /**
      * Initializes the controller class.
+     * @param url
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {

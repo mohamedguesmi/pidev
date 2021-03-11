@@ -28,11 +28,13 @@ public class CoursService {
        connexion=DataBase.getInstance().getConnexion();
     }
        public void ajouterCours(Cours c) throws SQLException {
-        String req = "INSERT INTO `cours` (`nom`, `nom_ens`, `nb_heure`) VALUES ( ?, ?, ?) ";
+        String req = "INSERT INTO `cours` (`nom`, `nom_ens`, `nb_heure`, `image`) VALUES ( ?, ?, ?,?) ";
         PreparedStatement pstm = connexion.prepareStatement(req);
         pstm.setString(1, c.getNom());
         pstm.setString(2, c.getNom_ens());
         pstm.setInt(3, c.getNb_heure());
+                pstm.setString(4, c.getImage());
+
         pstm.executeUpdate();
     }
        List<Cours> getAllCours() throws SQLException {
@@ -41,7 +43,7 @@ public class CoursService {
         Statement stm = connexion.createStatement();
         ResultSet result =  stm.executeQuery(req);    
         while(result.next()){
-            Cours c = new Cours(result.getString("nom"), result.getString("nom_ens"),result.getInt("nb_heure"));
+            Cours c = new Cours(result.getString("nom"), result.getString("nom_ens"),result.getInt("nb_heure"),result.getString("image"));
             cours.add(c);
         }
         
@@ -49,13 +51,15 @@ public class CoursService {
     }
     
     public boolean updateCours(Cours c) throws SQLException {
-        String sql = "UPDATE cours SET nom=?, nom_ens=?, nb_heure=? WHERE id=?";
+        String sql = "UPDATE cours SET nom=?, nom_ens=?, nb_heure=?,image=? WHERE id=?";
 
         PreparedStatement statement = connexion.prepareStatement(sql);
         statement.setString(1, c.getNom());
         statement.setString(2, c.getNom_ens());
         statement.setInt(3, c.getNb_heure());
-        statement.setInt(4, c.getId());
+                statement.setString(4, c.getImage());
+
+        statement.setInt(5, c.getId());
         System.out.println(c.getId());
         int rowsUpdated = statement.executeUpdate();
         if (rowsUpdated > 0) {
@@ -82,8 +86,23 @@ public class CoursService {
             String nom = rs.getString("nom");
             String nom_ens = rs.getString("nom_ens");
             int nb_heure = rs.getInt("nb_heure");
-            Cours c = new Cours(id, nom, nom_ens, nb_heure);
+                        String image = rs.getString("image");
+
+            Cours c = new Cours(id, nom, nom_ens, nb_heure,image);
             arr.add(c);
+        }
+        return arr;
+    }
+    
+    public List<String> GetEmails() throws SQLException {
+        List<String> arr = new ArrayList<>();
+        ste = connexion.createStatement();
+        ResultSet rs = ste.executeQuery("select email from user WHERE role = 'User' ");
+        while (rs.next()) {
+            
+            String email = rs.getString("email");
+           
+            arr.add(email);
         }
         return arr;
     }

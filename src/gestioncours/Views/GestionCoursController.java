@@ -7,7 +7,13 @@ package gestioncours.Views;
 
 import gestioncours.Entities.Cours;
 import gestioncours.Service.CoursService;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -22,9 +28,13 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.stage.FileChooser;
 
 /**
  * FXML Controller class
@@ -33,6 +43,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
  */
 public class GestionCoursController implements Initializable {
 
+    
     @FXML
     private Button AjouterC;
     @FXML
@@ -49,6 +60,8 @@ public class GestionCoursController implements Initializable {
     private TableColumn<Cours, String> nomE;
     @FXML
     private TableColumn<Cours, Integer> nbH;
+    @FXML
+    private Button r;
     private static Cours cr;
 
     /**
@@ -126,11 +139,22 @@ public class GestionCoursController implements Initializable {
             }
         });
        
-        
+         r.setOnAction(e->{  
+            Parent root ;
+         try {
+             root=FXMLLoader.load(getClass().getResource("IAdmin.fxml"));
+             r.getScene().setRoot(root);
+         } catch (IOException ex) {
+             Logger.getLogger(ModifierCoursController.class.getName()).log(Level.SEVERE, null, ex);
+         }
+            
+             });  
         
     }  
     
      public Cours getC() {
         return cr;
 }
+     
+     
 }

@@ -7,7 +7,13 @@ package gestioncours.Views;
 
 import gestioncours.Entities.Cours;
 import gestioncours.Service.CoursService;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
@@ -19,7 +25,11 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.stage.FileChooser;
 
 /**
  * FXML Controller class
@@ -28,6 +38,11 @@ import javafx.scene.control.TextField;
  */
 public class ModifierCoursController implements Initializable {
 
+    private String imageP;
+    @FXML
+    private ImageView ImageField;
+    @FXML
+    private Label ImagePath;
     @FXML
     private Button r;
     @FXML
@@ -93,7 +108,7 @@ public class ModifierCoursController implements Initializable {
          else pr = Integer.parseInt(nb);
          if(ok==true){
              
-             Cours cours = new Cours(n, ne, pr);
+             Cours cours = new Cours(n, ne, pr,imageP);
              cours.setId(crs.getId());
              CoursService cs = new CoursService();
              try {
@@ -115,4 +130,44 @@ public class ModifierCoursController implements Initializable {
     public Cours getC() {
         return cr;
 }
+    
+    @FXML
+    public void ChoiceImage() throws FileNotFoundException, IOException {
+        FileChooser fc = new FileChooser();
+        //fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("Images", listFichier));
+        File f = fc.showOpenDialog(null);
+        if (f != null) {
+
+            //Commentaire.setText("Image selectionnée" + f.getAbsolutePath());
+            InputStream is = null;
+            OutputStream os = null;
+            try {
+                is = new FileInputStream(new File(f.getAbsolutePath()));
+//             
+                os = new FileOutputStream(new File("C:/xampp/htdocs/AssetsPIDEV/" + f.getName()));
+                byte[] buffer = new byte[1024];
+                int length;
+                while ((length = is.read(buffer)) > 0) {
+                    os.write(buffer, 0, length);
+                }
+                System.out.println("louay");
+
+            } finally {
+                is.close();
+                os.close();
+
+            }
+
+            File file = new File("C:/xampp/htdocs/AssetsPIDEV/" + f.getName());
+//            System.out.println(file.toURI().toString());
+            ImageField.setImage(new Image(file.toURI().toString()));
+            imageP = f.getName();
+            System.out.println(imageP);
+            ImagePath.setText(imageP);
+        } else if (f == null) {
+            //Commentaire.setText("Erreur chargement de l'image");
+            System.out.println("Erreur !");
+        }
+
+    }
 }

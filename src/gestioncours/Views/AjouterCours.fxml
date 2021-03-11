@@ -8,25 +8,25 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestioncours.Views.AjouterCoursController">
+<AnchorPane id="AnchorPane" prefHeight="453.0" prefWidth="800.0" styleClass="backadmin" stylesheets="@login1.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestioncours.Views.AjouterCoursController">
    <children>
-      <AnchorPane prefHeight="400.0" prefWidth="222.0" styleClass="linear-grad" stylesheets="@login1.css">
-         <children>
-            <ImageView fitHeight="225.0" fitWidth="222.0" layoutX="4.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../../../esprit%203ème/PI/logo.png" />
-               </image>
-            </ImageView>
-         </children>
-      </AnchorPane>
-      <Label layoutX="262.0" layoutY="28.0" prefHeight="36.0" prefWidth="222.0" text="Ajotuer un cours!">
+      <Label layoutX="262.0" layoutY="28.0" prefHeight="40.0" prefWidth="368.0" text="Ajotuer un cours!" textFill="#f0ecec">
          <font>
-            <Font name="System Bold" size="25.0" />
+            <Font name="Courier New Bold" size="33.0" />
          </font>
       </Label>
-      <TextField fx:id="nomC" layoutX="262.0" layoutY="94.0" prefHeight="26.0" prefWidth="162.0" promptText="Nom du cours" />
-      <TextField fx:id="nbH" layoutX="262.0" layoutY="159.0" prefHeight="26.0" prefWidth="161.0" promptText="Nombre d'heure du cours" />
-      <TextField fx:id="nomE" layoutX="262.0" layoutY="226.0" promptText="Nom d'enseignant" />
-      <Button fx:id="v" layoutX="459.0" layoutY="300.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="91.0" styleClass="button7" stylesheets="@login1.css" text="Validez" />
+      <TextField fx:id="nomC" layoutX="291.0" layoutY="140.0" prefHeight="26.0" prefWidth="162.0" promptText="Nom du cours" />
+      <TextField fx:id="nbH" layoutX="291.0" layoutY="183.0" prefHeight="26.0" prefWidth="161.0" promptText="Nombre d'heure du cours" />
+      <TextField fx:id="nomE" layoutX="291.0" layoutY="227.0" promptText="Nom d'enseignant" />
+      <Button fx:id="v" layoutX="320.0" layoutY="411.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="91.0" styleClass="linear-grad" stylesheets="@login1.css" text="Validez" />
+      <Button layoutX="283.0" layoutY="316.0" mnemonicParsing="false" onAction="#ChoiceImage" text="Upload" />
+      <Label fx:id="ImagePath" layoutX="256.0" layoutY="280.0" prefHeight="18.0" prefWidth="109.0" />
+      <ImageView fx:id="ImageField" fitHeight="124.0" fitWidth="126.0" layoutX="390.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true" />
+      <Button fx:id="r" mnemonicParsing="false" prefHeight="26.0" prefWidth="81.0" styleClass="linear-grad" stylesheets="@login1.css" text="retour" />
+      <ImageView fitHeight="315.0" fitWidth="337.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/logo.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

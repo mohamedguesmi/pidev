@@ -29,7 +29,8 @@ public class GestionCours extends Application {
          try {
             Parent root = FXMLLoader.load(getClass().getResource("/gestioncours/Views/Acceuil.fxml"));
 
-            Scene scene = new Scene(root);
+            Scene scene = new Scene(root,800,453);
+            
 
             primaryStage.setTitle("LEARN&LEAD");
             primaryStage.setScene(scene);

@@ -16,6 +16,25 @@ public class Cours {
     private String nom;
     private String nom_ens ;
     private int nb_heure;
+    private String image;
+
+    public Cours() {
+    }
+
+    public Cours(int id, String nom, String nom_ens, int nb_heure, String image) {
+        this.id = id;
+        this.nom = nom;
+        this.nom_ens = nom_ens;
+        this.nb_heure = nb_heure;
+        this.image = image;
+    }
+
+    public Cours(String nom, String nom_ens, int nb_heure, String image) {
+        this.nom = nom;
+        this.nom_ens = nom_ens;
+        this.nb_heure = nb_heure;
+        this.image = image;
+    }
 
     public int getId() {
         return id;
@@ -49,59 +68,21 @@ public class Cours {
         this.nb_heure = nb_heure;
     }
 
-    public Cours() {
+    public String getImage() {
+        return image;
     }
 
-    public Cours(int id, String nom, String nom_ens, int nb_heure) {
-        this.id = id;
-        this.nom = nom;
-        this.nom_ens = nom_ens;
-        this.nb_heure = nb_heure;
-    }
-
-    public Cours(String nom, String nom_ens, int nb_heure) {
-        this.nom = nom;
-        this.nom_ens = nom_ens;
-        this.nb_heure = nb_heure;
+    public void setImage(String image) {
+        this.image = image;
     }
 
     @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 79 * hash + this.id;
-        hash = 79 * hash + Objects.hashCode(this.nom);
-        hash = 79 * hash + Objects.hashCode(this.nom_ens);
-        hash = 79 * hash + this.nb_heure;
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Cours other = (Cours) obj;
-        if (this.id != other.id) {
-            return false;
-        }
-        if (this.nb_heure != other.nb_heure) {
-            return false;
-        }
-        if (!Objects.equals(this.nom, other.nom)) {
-            return false;
-        }
-        if (!Objects.equals(this.nom_ens, other.nom_ens)) {
-            return false;
-        }
-        return true;
+    public String toString() {
+        return "Cours{" + "id=" + id + ", nom=" + nom + ", nom_ens=" + nom_ens + ", nb_heure=" + nb_heure + ", image=" + image + '}';
     }
     
+
+   
     
     
 }

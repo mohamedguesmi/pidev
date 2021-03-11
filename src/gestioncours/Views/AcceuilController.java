@@ -60,6 +60,7 @@ public class AcceuilController implements Initializable {
                 try {
                 Parent root;
                 root = FXMLLoader.load(getClass().getResource("IUser.fxml"));
+                //Scene scene = new Scene(root, 600, 400);
                 signin.getScene().setRoot(root);
             } catch (IOException ex) {
                 Logger.getLogger(AcceuilController.class.getName()).log(Level.SEVERE, null, ex);
