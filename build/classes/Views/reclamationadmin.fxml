@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Views.ReclamationadminController">
+   <children>
+      <AnchorPane layoutX="-3.0" layoutY="2.0" prefHeight="775.0" prefWidth="339.0" style="-fx-background-color: #393351;">
+         <children>
+            <Pane layoutY="164.0" prefHeight="88.0" prefWidth="337.0" style="-fx-background-color: #FA2C56; -fx-background-radius: 5;">
+               <children>
+                  <Label layoutX="29.0" layoutY="27.0" prefHeight="21.0" prefWidth="259.0" text="Espace des réclamation" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="7.0" prefHeight="52.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="r" layoutX="22.0" layoutY="11.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="157.0" styleClass="button3" stylesheets="file:/C:/Users/ASUS/Documents/NetBeansProjects/GestionScolarite/src/Views/login1.css" text="Se déconnecter" textFill="WHITE" />
+               </children>
+            </Pane>
+            <Button fx:id="ActualiserR" alignment="CENTER_RIGHT" layoutY="556.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="337.0" styleClass="button3" stylesheets="@login1.css" text="Actualiser la liste" textAlignment="JUSTIFY" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="r4" layoutX="14.0" layoutY="52.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="211.0" styleClass="button2" stylesheets="file:/C:/Users/ASUS/Documents/NetBeansProjects/GestionScolarite/src/Views/login1.css" text="Retour au menu précedent" />
+         </children>
+      </AnchorPane>
+      <Pane layoutX="335.0" prefHeight="776.0" prefWidth="817.0">
+         <children>
+            <TableView fx:id="tb" layoutX="7.0" layoutY="223.0" prefHeight="480.0" prefWidth="797.0">
+               <columns>
+                  <TableColumn fx:id="nomR" prefWidth="170.66668701171875" text="nom de reclamation" />
+                  <TableColumn fx:id="sujetR" prefWidth="164.33331298828125" text="sujet de reclamation" />
+                  <TableColumn fx:id="dateR" prefWidth="190.0" text="Date  de reclamation" />
+                  <TableColumn fx:id="user" prefWidth="270.0" text="UserId" />
+               </columns>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

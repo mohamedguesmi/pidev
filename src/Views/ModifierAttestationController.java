@@ -20,6 +20,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 
@@ -31,7 +32,7 @@ import javafx.scene.control.TextField;
 public class ModifierAttestationController implements Initializable {
 
     @FXML
-    private TextField typeA;
+    private ChoiceBox<String> typeA;
     @FXML
     private TextField langueA;
     @FXML
@@ -46,10 +47,12 @@ public class ModifierAttestationController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        typeA.getItems().add("Présence");
+        typeA.getItems().add("Inscription");
         AttestationFController afc = new AttestationFController();
         Attestation ats= afc.getA();
         String dateAT= ats.getDateA();
-        typeA.setText(ats.getTypeA());
+        typeA.setValue(ats.getTypeA());
         langueA.setText(ats.getLangueA());
         dateA.setValue(LocalDate.now());
         System.out.println("bla"+ats.getId());
@@ -74,16 +77,16 @@ public class ModifierAttestationController implements Initializable {
 
                 alert.setTitle("Error");
                  
-         String t= typeA.getText();
+         String t= typeA.getValue();
          String l=langueA.getText();
          String d= dateA.getEditor().getText();
          String ch="";
          Boolean ok =true;
          int pr = -1;
-         if(!t.matches("^[a-zA-Z]+$")){
+        /* if(!t.matches("^[a-zA-Z]+$")){
              ch+="Vous devez entrer un bloc valide!";
              ok=false;
-         }
+         }*/
          if(!l.matches("^[a-zA-Z]+$")){
              ch+="Vous devez entrer une libelle valide!";
              ok=false;

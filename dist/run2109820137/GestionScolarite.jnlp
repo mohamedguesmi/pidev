@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="GestionScolarite.jnlp">
+  <information>
+    <title>GestionScolarite</title>
+    <vendor>ASUS</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="GestionScolarite.jar" size="11928666" download="eager" />
+    <jar href="lib\activation.jar" size="45386" download="eager" />
+    <jar href="lib\classgen.jar" size="39293" download="eager" />
+    <jar href="lib\http_client.jar" size="473514" download="eager" />
+    <jar href="lib\itextpdf-5.1.0.jar" size="1614453" download="eager" />
+    <jar href="lib\jcr-1.0.jar" size="37948" download="eager" />
+    <jar href="lib\mail.jar" size="507849" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.15-bin.jar" size="785998" download="eager" />
+    <jar href="lib\ojcr.jar" size="361872" download="eager" />
+    <jar href="lib\oraclexsql.jar" size="158465" download="eager" />
+    <jar href="lib\schagent.jar" size="340770" download="eager" />
+    <jar href="lib\xml.jar" size="624322" download="eager" />
+    <jar href="lib\xmlcomp.jar" size="96408" download="eager" />
+    <jar href="lib\xmlcomp2.jar" size="11627" download="eager" />
+    <jar href="lib\xmlmesg.jar" size="771065" download="eager" />
+    <jar href="lib\xmlparserv2.jar" size="1918463" download="eager" />
+    <jar href="lib\xmlparserv2_jaxp_services.jar" size="1459" download="eager" />
+    <jar href="lib\xmlparserv2_sans_jaxp_services.jar" size="1916026" download="eager" />
+    <jar href="lib\xschema.jar" size="162112" download="eager" />
+    <jar href="lib\xsqlserializers.jar" size="3789" download="eager" />
+    <jar href="lib\xsu12.jar" size="206615" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="GestionScolarite" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="gestionscolarite.GestionScolarite"  name="GestionScolarite" />
+  <update check="always"/>
+</jnlp>

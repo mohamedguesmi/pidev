@@ -19,6 +19,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 
@@ -30,11 +31,9 @@ import javafx.scene.control.TextField;
 public class AjouterAttestationController implements Initializable {
 
     @FXML
-    private TextField typeA;
+    private ChoiceBox<String> typeA;
     @FXML
     private TextField langueA;
-    @FXML
-    private Button shutdown;
     @FXML
     private Button valider;
     @FXML
@@ -55,6 +54,8 @@ public class AjouterAttestationController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        typeA.getItems().add("Présence");
+        typeA.getItems().add("Inscription");
         r.setOnAction(e->{ 
             try {
                 Parent root;
@@ -76,16 +77,17 @@ public class AjouterAttestationController implements Initializable {
                 alert.setTitle("Success");
                 
        
-         String t= typeA.getText();
+         String t= typeA.getValue();
+         System.out.println("I am hereeeeee "+t);
          String d= dateA.getEditor().getText();
          String l=langueA.getText();
          String ch="";
          Boolean ok =true;
          int pr = -1;
-         if(!t.matches("^[a-zA-Z]+$")){
+        /* if(!t.matches("^[a-zA-Z]+$")){
              ch+="Vous devez entrer un type valide!";
              ok=false;
-         }
+         }*/
          if(!l.matches("^[a-zA-Z]+$")){
              ch+="Vous devez entrer une langue valide!";
              ok=false;
