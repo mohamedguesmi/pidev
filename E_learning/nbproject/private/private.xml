@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/amado/Documents/NetBeansProjects/E_learning/src/modeles/Formation2.java</file>
+            <file>file:/C:/Users/amado/Documents/NetBeansProjects/E_learning/src/e_learning/E_learning.java</file>
+            <file>file:/C:/Users/amado/Documents/NetBeansProjects/E_learning/src/modeles/Offre.java</file>
+            <file>file:/C:/Users/amado/Documents/NetBeansProjects/E_learning/src/modeles/User.java</file>
+            <file>file:/C:/Users/amado/Documents/NetBeansProjects/E_learning/src/interfaces/IUser.java</file>
+            <file>file:/C:/Users/amado/Documents/NetBeansProjects/E_learning/src/services/FormationService.java</file>
+            <file>file:/C:/Users/amado/Documents/NetBeansProjects/E_learning/src/connexion/MyConnexion.java</file>
+            <file>file:/C:/Users/amado/Documents/NetBeansProjects/E_learning/src/controllers/FormationController.java</file>
+            <file>file:/C:/Users/amado/Documents/NetBeansProjects/E_learning/src/interfaces/IFormation.java</file>
+            <file>file:/C:/Users/amado/Documents/NetBeansProjects/E_learning/src/modeles/Formation.java</file>
+            <file>file:/C:/Users/amado/Documents/NetBeansProjects/E_learning/src/services/UserService.java</file>
+            <file>file:/C:/Users/amado/Documents/NetBeansProjects/E_learning/src/controllers/OffreController.java</file>
+            <file>file:/C:/Users/amado/Documents/NetBeansProjects/E_learning/src/controllers/HomeController.java</file>
+            <file>file:/C:/Users/amado/Documents/NetBeansProjects/E_learning/src/view/Formation.fxml</file>
+            <file>file:/C:/Users/amado/Documents/NetBeansProjects/E_learning/src/services/OffreService.java</file>
+        </group>
+    </open-files>
+</project-private>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="E_learning.jnlp">
+  <information>
+    <title>E_learning</title>
+    <vendor>amado</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="E_learning.jar" size="85070" download="eager" />
+    <jar href="lib\jfoenix.jar" size="2176841" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.40-bin.jar" size="990927" download="eager" />
+    <jar href="lib\scenebuilder-8.5.0-all.jar" size="9916146" download="eager" />
+    <jar href="lib\scenebuilder-all-8.3.0-all.jar" size="9570876" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="E_learning" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="e_learning.E_learning"  name="E_learning" />
+  <update check="always"/>
+</jnlp>
