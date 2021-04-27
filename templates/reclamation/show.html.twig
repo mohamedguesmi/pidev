@@ -1,0 +1,38 @@
+{% extends 'frontend/frontheaderfooter.html.twig' %}
+
+{% block title %}Reclamation{% endblock %}
+
+{% block content %}
+    <h1>Reclamation</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Idreclamation</th>
+                <td>{{ reclamation.idreclamation }}</td>
+            </tr>
+            <tr>
+                <th>Nomr</th>
+                <td>{{ reclamation.nomr }}</td>
+            </tr>
+            <tr>
+                <th>Sujetr</th>
+                <td>{{ reclamation.sujetr }}</td>
+            </tr>
+            <tr>
+                <th>Dater</th>
+                <td>{{ reclamation.dater }}</td>
+            </tr>
+            <tr>
+                <th>User</th>
+                <td>{{ reclamation.user }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('reclamation_index') }}">back to list</a>
+
+    <a href="{{ path('reclamation_edit', {'idreclamation': reclamation.idreclamation}) }}">edit</a>
+
+    {{ include('reclamation/_delete_form.html.twig') }}
+{% endblock %}

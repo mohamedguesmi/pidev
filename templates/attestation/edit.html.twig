@@ -1,0 +1,13 @@
+{% extends 'frontend/frontheaderfooter.html.twig' %}
+
+{% block title %}Edit Attestation{% endblock %}
+
+{% block content %}
+    <h1>Edit Attestation</h1>
+
+    {{ include('attestation/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('attestation_index') }}">back to list</a>
+
+    {{ include('attestation/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'frontend/frontheaderfooter.html.twig' %}
+
+
+{% block title %}Attestation{% endblock %}
+
+{% block content %}
+    <h1>Attestation</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ attestation.id }}</td>
+            </tr>
+            <tr>
+                <th>Typea</th>
+                <td>{{ attestation.typea }}</td>
+            </tr>
+            <tr>
+                <th>Languea</th>
+                <td>{{ attestation.languea }}</td>
+            </tr>
+            <tr>
+                <th>Datea</th>
+                <td>{{ attestation.datea }}</td>
+            </tr>
+            <tr>
+                <th>User</th>
+                <td>{{ attestation.user }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('attestation_index') }}">back to list</a>
+
+    <a href="{{ path('attestation_edit', {'id': attestation.id}) }}">edit</a>
+
+    {{ include('attestation/_delete_form.html.twig') }}
+
+{% endblock %}

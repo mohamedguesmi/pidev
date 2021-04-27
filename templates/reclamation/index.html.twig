@@ -1,0 +1,45 @@
+{% extends 'frontend/frontheaderfooter.html.twig' %}
+
+{% block title %}Reclamation index{% endblock %}
+
+{% block content %}
+
+    <h1>Reclamation index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Idreclamation</th>
+                <th>Nomr</th>
+                <th>Sujetr</th>
+                <th>Dater</th>
+                <th>User</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for reclamation in reclamations %}
+            <tr>
+                <td>{{ reclamation.idreclamation }}</td>
+                <td>{{ reclamation.nomr }}</td>
+                <td>{{ reclamation.sujetr }}</td>
+                <td>{{ reclamation.dater }}</td>
+                <td>{{ reclamation.user }}</td>
+                <td>
+                    <a href="{{ path('reclamation_show', {'idreclamation': reclamation.idreclamation}) }}">show</a>
+                    <a href="{{ path('reclamation_edit', {'idreclamation': reclamation.idreclamation}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        <div class="navigation">
+            {{ knp_pagination_render(reclamations) }}
+        </div>
+        </tbody>
+    </table>
+
+    <a href="{{ path('reclamation_new') }}">Create new</a>
+{% endblock %}

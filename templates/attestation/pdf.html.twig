@@ -1,0 +1,32 @@
+
+{% block content %}
+    <h1>Liste des attestations</h1><hr>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Typea</th>
+            <th>Languea</th>
+            <th>Datea</th>
+            <th>User</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for attestation in attestations %}
+            <tr>
+                <td>{{ attestation.id }}</td>
+                <td>{{ attestation.typea }}</td>
+                <td>{{ attestation.languea }}</td>
+                <td>{{ attestation.datea }}</td>
+                <td>{{ attestation.user }}</td>
+
+            </tr>
+
+
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}
